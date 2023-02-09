@@ -3,7 +3,7 @@ const db = "http://localhost:3000/films"
 
 document.addEventListener("DOMContentLoaded", () => {
     getMovies();
-
+    document.querySelector("#buy-ticket").addEventListener("click", handleBuyTicket);
 });
 
 function getMovies() {
@@ -37,4 +37,17 @@ function handleMovieClick(movie) {
     info.querySelector("#film-info").textContent = movie.description;
     info.querySelector("#showtime").textContent = movie.showtime;
     info.querySelector("#ticket-num").textContent = movie.capacity - movie.tickets_sold + " remaining tickets";
+}
+
+function handleBuyTicket(e) {
+    const ticketDiv = document.querySelector("#ticket-num");
+    const tickets = ticketDiv.textContent.split(" ")[0];
+    if (tickets > 0) {
+        ticketDiv.textContent = tickets - 1 + " remaining tickets";
+    }
+    else if (tickets == 0) {
+        alert("No more tickets!");
+        e.target.classList.add("sold-out");
+        e.target.classList.remove("orange");
+    }
 }
