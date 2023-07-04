@@ -1,5 +1,4 @@
 // Your code here
-const db = "http://localhost:3000/films"
 
 document.addEventListener("DOMContentLoaded", () => {
     getMovies();
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getMovies() {
-    fetch(db)
+    fetch("http://localhost:3000/films")
     .then(res => res.json())
     .then(movies => {
         movies.forEach(movie => {renderMovieList(movie)})

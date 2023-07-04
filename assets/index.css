@@ -1,21 +1,21 @@
 body {
-  background-color: #ebebeb;
+  background-color: #428292;
 }
 
 .heading {
-  background-color: #333333;
+  background-color: #4c338f;
   margin-bottom: 20px;
   padding: 5px 0px 5px 15px;
 }
 
 .title {
-  background-color: #333333;
+  background-color: #0e010e;
   padding: 5px;
   color: white;
 }
 
 #runtime {
-  background-color: #333333;
+  background-color: #428292;
   color: #3e8fde;
   padding: 0px 0px 5px 5px;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .film {
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
